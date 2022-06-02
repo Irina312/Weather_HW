@@ -24,13 +24,4 @@ public class HomeTest extends BaseTest {
         homePage.closeBtn.click();
     }
 
-
-    @Test(testName = "10 day weather")
-    public void test05() {
-
-        homePage.dayBtn.click();
-        System.out.println(homePage.todayWeather.getText());
-    }
-
-
 }

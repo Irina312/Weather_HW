@@ -10,7 +10,6 @@ public class SocialMediaTest extends BaseTest {
 
     @BeforeMethod
     public void localSetUp() {
-
         socialMediaPage = new SocialMediaPage(getDriver());
     }
     @Test(testName = "Facebook page title")
