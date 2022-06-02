@@ -15,17 +15,11 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div//h2[text()='Your Privacy']")
+    @FindBy(xpath = "//*[@class='PrivacyDataNotice--mainParagraph--1nQsp']")
     public WebElement privacyText;
 
     @FindBy(xpath = "//*[@class='Icon--icon--3wCKh Icon--actionTheme--sZu_q PrivacyDataNotice--closeButton--1fBzh']")
     public WebElement closeBtn;
-
-    @FindBy(css = "a[aria-label='facebook, opens in new window']")
-    public WebElement facebookBtn;
-
-    @FindBy(css = "a[aria-label='twitter, opens in new window']")
-    public WebElement twitterBtn;
 
     @FindBy(xpath = "//span[text()='10 Day']")
     public WebElement dayBtn;
