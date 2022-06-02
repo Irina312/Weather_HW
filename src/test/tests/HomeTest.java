@@ -13,30 +13,24 @@ public class HomeTest extends BaseTest {
 
     @BeforeMethod
     public void localSetUp() {
+
         homePage = new HomePage(getDriver());
     }
 
     @Test(testName = "Print 'Your Privacy' text")
     public void test01() {
 
-        homePage.privacyText.getText();
+        System.out.println(homePage.privacyText.getText());
         homePage.closeBtn.click();
     }
 
-    @Test(testName = "Facebook page title")
-    public void test02(){
 
-        homePage.facebookBtn.click();
-        System.out.println(getDriver().getTitle());
+    @Test(testName = "10 day weather")
+    public void test05() {
+
+        homePage.dayBtn.click();
+        System.out.println(homePage.todayWeather.getText());
     }
-
-    @Test(testName = "Twitter page title")
-    public void test03() {
-
-        homePage.twitterBtn.click();
-        System.out.println(getDriver().getTitle());
-    }
-
 
 
 }
