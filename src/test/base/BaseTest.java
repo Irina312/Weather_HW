@@ -13,13 +13,13 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
-   // private final String filePath = "src/test/data/config/configuration.properties";
+    private final String filePath = "src/test/data/config.properties";
 
     @BeforeMethod
     public void setUp(){
-        initializeDriver("chrome");
+        initializeDriver(ConfigReader.readProperty(filePath, "browser"));
         driver.get("https://weather.com/");
-        //driver.get(ConfigReader.readProperty(filePath, "url"));
+        driver.get(ConfigReader.readProperty(filePath, "url"));
     }
 
     @AfterMethod

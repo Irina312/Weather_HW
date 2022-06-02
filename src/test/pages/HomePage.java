@@ -21,4 +21,10 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//div[@class='PrivacyDataNotice--notice--5SUaf'])[1]//svg[name='close']")
     public WebElement closeBtn;
 
+    @FindBy(css = "a[aria-label='facebook, opens in new window']")
+    public WebElement facebookBtn;
+
+    @FindBy(css = " a[aria-label='twitter, opens in new window']")
+    public WebElement twitterBtn;
+
 }
